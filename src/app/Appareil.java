@@ -15,6 +15,14 @@ public class Appareil implements IAppareil{
 
     @Override
     public void enregister(Appel appel, String numeroTel) {
+        //Enregistrer un appel sachant le numéro de téléphone
+        Contact c1 = null;
+        for (Contact c : contacts) {
+            if (c.getNumeroTel().equals(numeroTel)){
+                c1 = c;
+                break;
+            }
+        }
 
     }
 
